@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>High Score</h2>
+            <p id="high-score"><span id="highscore"></span></p>
+            <h2>Điểm Hiện Tại</h2>
+            <p id="current-score"><span id="score"></span></p>
+        </div>
+        <div id="Board" class="board"></div>
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameOverModal()"></span>
+                <h2>Bạn đã thua! <br> Điểm lần này là <span id="scoreshow"></span></h2>
+                <p>Hãy thử lại lần nữa!</p>
+                <div class="controls">
+                    <button id="playagain">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
