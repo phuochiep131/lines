@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../another/picture/nen1.webp) no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(4px);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #11140f;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.sidebar h2{
+    color: #01010f;
+}
+
+.sidebar p{
+    color: #01010f;
+    padding: 5px;
+    text-align: left;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 60px);
+    grid-template-rows: repeat(9, 60px);
+    gap: 4px;
+    margin: 0 20px;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+.controls{
+    padding-top: 50px;
+}
+
+.controls button{
+    width: 80px;
+    height: 40px;
+}
+
+.modal {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #0c0b0b;
+    background-color: #f6d9d9;
+    position: relative;
+}
+
+.cell:hover {
+    background-color: rgb(224, 190, 158); 
+    cursor: pointer; 
+}
+
+.circle {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(252, 249, 249);
+    border-radius: 50%; 
+    margin: auto;
+    transform: translateY(7px);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+/* .circle.selected {
+    transform: scale(1.01);
+    transition: transform 0.2s ease-in-out;
+} */
+
+
+.circle.selected {
+    animation: bounce 0.6s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.circle.fade-out {
+    animation: disappear 0.5s forwards;
+}
+
+
+
+
+
+/* du doan bong */
+.circle-pre {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(252, 249, 249);
+    border-radius: 50%; 
+    margin: auto;
+    transform: translateY(15px);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+
+button {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.guide{
+    border-radius: 10px;
+    width: 530px;
+    height: 400px;
+    background-color: beige;
+}
+
+table{
+    /* border: 1px solid black; */
+    width: 530px;
+    height: 660px;
+}
+
+.text-guide{
+    text-align: left;
+    padding: 5px;
+    color: rgb(65, 190, 37);
+}
+
+.img-guide{
+    width: 460px;
+    height: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* tr{
+    border: 1px solid black;
+}
+
+th{
+    border: 1px solid black;
+} */
+
+.camera-container {
+    margin: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 190px;
+    height: 140px;
+    border: 2px solid #000;
+    background-color: #000;
+}
+
+#cameraCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}

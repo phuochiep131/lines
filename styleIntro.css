@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    background: url(another/picture/nen2.webp) no-repeat; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+}
+
+.container {
+    margin-top: 10%;
+}
+
+.container b{
+    color: #0f070cce;
+    font-size: 80px;
+    text-shadow: 4px 2px 4px rgba(244, 242, 242, 0.5);
+}
+
+.container h1 {
+    color: #0f070cce;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: rgb(227, 227, 48);
+    font-size: 14px;
+    margin-top: 10px;
+    visibility: hidden;
+}
+

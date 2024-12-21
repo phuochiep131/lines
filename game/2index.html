@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lines</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <table>
+            <tr>
+                <th>
+                    <div class="sidebar">
+                        <h2>Điểm Cao Nhất</h2>
+                        <p id="high-score"><span id="highscore"></span></p>
+                    </div>
+                </th>
+                <th>
+                    <div class="sidebar">
+                        <h2>Điểm Hiện Tại</h2>
+                        <p style="text-align: center;" id="current-score"><span id="score"></span></p>
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <div class="guide">
+                        <p class="text-guide">
+                            Mục tiêu: Tạo thành 1 hàng &#40;có thể là hàng ngang, dọc hoặc chéo&#41; có ít nhất 5 viên bi cùng màu để ghi điểm.
+                        </p>
+                        <img class="img-guide" src="../another/picture/guide.png" alt="Ảnh hướng dẫn">
+                    </div>
+                </th>
+            </tr>
+        </table>
+
+
+        <div style="width: 100px;"></div>
+
+
+        <div id="Board" class="board"></div>
+
+
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content">
+                <h2>Bạn đã thua! <br> Điểm lần này là <span id="scoreshow"></span></h2>
+                <p>Hãy thử lại lần nữa!</p>
+                <div class="controls">
+                    <button id="playagain">OK</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="controls">
+            <button id="reset-btn">Chơi lại</button>
+        </div>
+    </div>
+
+    <audio id="music" src="another/music/musicgame.mp3" autoplay loop></audio>
+
+    <!-- <script src="script.js"></script> -->
+    <script src="spt.js"></script>
+</body>
+</html>
